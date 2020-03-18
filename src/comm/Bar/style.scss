@@ -1,0 +1,92 @@
+.tablBar{
+    position: fixed;
+    z-index: 100;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 13.333vmin;
+    max-width: 750px;
+    margin: 0 auto;
+    background-color: #fff;
+    .tablBar_box{
+        display: flex;
+        height: 100%;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        .tablBar_item{
+            position: relative;
+            display: block;
+            flex: 1;
+            color: #666;
+            display: flex;
+            line-height: 1;
+            font-size: 12px;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            &>div{
+                font-size: 18px;
+                position: relative;
+                &>img{
+                    display: block;
+                    width: 6.767vmin;
+                    height: 6.767vmin;
+                }
+            }
+            &>p{
+                font-size: 3.2vmin;
+            }
+            .count{
+                position: absolute;
+                width: 4vmin;
+                background-color: #f44;
+                height: 4vmin;
+                top: 0;
+                right: 2vmin;
+                text-align: center;
+                line-height: 4vmin;
+                border-radius: 10px;
+                color: #fff;
+                font-size: 3vmin;
+            }
+        }
+    }
+}
+
+
+.countDynamic{
+    position: absolute !important;
+    top: -26vmin;
+    width: 3vmin;
+    height: 3vmin;
+    border-radius: 10px;
+    opacity: 0;
+    background-color: #f44;
+    transition: all .3s;
+    animation-name: example;
+    animation-duration: .3s;
+}
+
+
+@keyframes example {
+  0%   {
+      top: -26vmin;
+      opacity: 0;
+    }
+  25%  {
+      top: -21.75vmin;
+      opacity: .25;
+    }
+  50%  {
+      top: -14.5vmin;
+      opacity: 0.5;
+    }
+  75%  {
+      top: -7.25vmin;
+      opacity: .75;
+    }
+  100% {
+      top: 3vmin;
+      opacity: 1;
+    }
+}

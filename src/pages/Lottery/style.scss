@@ -1,0 +1,146 @@
+.Lottery{
+    background: #fff;
+    box-sizing: border-box;
+    padding: 2.667vmin;
+    width: 100%;
+    height: 26.667vmin;
+    overflow: hidden;
+    border-right: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    content: "viewport-units-buggyfill; padding: 2.667vmin; max-width: 100vmin; height: 26.667vmin";
+    .Lottery_box{
+        display: flex;
+        font-size: 3.467vmin;
+        content: "viewport-units-buggyfill; font-size: 3.467vmin";
+        .Lottery_box_item_left{
+            width: 20vmin;
+            height: 20vmin;
+            margin-right: 4vmin;
+            position: relative;
+            content: "viewport-units-buggyfill; width: 20vmin; height: 20vmin; margin-right: 4vmin";
+            img{
+                margin: 0 auto;
+                width: auto;
+                display: block;
+                border: 0;
+                overflow: hidden;
+                height: 20vmin;
+                background-color: #f5f5f5;
+            }
+            span{
+                padding: .23rem;
+                width: 20vmin;
+                text-align: center;
+                background: rgba(0,0,0,.6);
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                color: #fff;
+                content: "viewport-units-buggyfill; width: 20vmin";
+            }
+        }
+        .Lottery_box_item_right{
+            display: flex;
+            padding: .33rem;
+            content: "viewport-units-buggyfill; padding: 1.333vmin 0";
+                .hd{
+                    width: 7.733vmin;
+                    height: 7.733vmin;
+                    border: 1px solid #f70;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    margin-right: 3.333vmin;
+                    content: "viewport-units-buggyfill; margin-right: 3.333vmin";
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .bd{
+                    p{
+                        color: #000;
+                        font-size: 3.333vmin;
+                        line-height: 1.2;
+                        text-align: left;
+                        word-break: break-all;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 1;
+                        -webkit-box-orient: vertical;
+                        content: "viewport-units-buggyfill; font-size: 3.333vmin";
+                        em{
+                            font-style: normal;
+                            color: #f70;
+                        }
+                    }
+                }
+        }
+    }
+}
+
+// Lottery_publish_time
+.Lottery_publish_time{
+    display: flex;
+    align-items: center;
+    min-width: 100%;
+    position: relative;
+    padding: .667vmin 2.421vmin .667vmin 7.2vmin;
+    background-color: #f70;
+    color: #fff;
+    line-height: 31px;
+    border-radius: 1.333vmin;
+    transition: all .4s;
+    content: "viewport-units-buggyfill; margin-top: 1.333vmin; padding: 0.667vmin 0 0.667vmin 7.2vmin; width: 40vmin; border-radius: 1.333vmin";
+    img{
+        width: 4vmin;
+        height: 4.6vmin;
+        display: inline-block;
+        position: absolute;
+        left: 2vmin;
+        top: 2vmin;
+    }
+    span{
+        text-align: center;
+        line-height: 1;
+        margin: 0 0.234rem;
+    }
+    em{
+        font-size: 4.533vmin;
+        line-height: 1;
+        font-style: normal;
+        font-weight: 400;
+        content: "viewport-units-buggyfill; font-size: 4.533vmin";
+    }
+    &>div{
+        width: 60%;
+        float: right;
+    }
+}
+
+
+// addProduct
+.addProduct{
+    color: #999;
+    text-align: center;
+    height: 44px;
+    line-height: 44px;
+    border-top: 1px solid #eee;
+}
+
+// loading
+.spinLoading{
+    &>div{
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: #000;
+        z-index: 200;
+        opacity: .6;
+        &>span{
+            margin-top: 21rem;
+        }
+    }
+}

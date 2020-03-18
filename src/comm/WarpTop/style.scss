@@ -1,0 +1,42 @@
+.WarpTop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    color: #fff;
+    width: 750px;
+    height: 44px;
+    margin: 0 auto;
+    font-size: 0.9rem;
+    padding: 0 10px;
+    z-index: 100;
+    line-height: 44px;
+    background-color: #f70;
+    .WarpTop_back{
+        display: block;
+        line-height: 3.5;
+        img{
+            height: 15px;
+        }
+    }
+    .WarpTop_text{
+        position: absolute;
+        left: 3rem;
+        right: 3rem;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .WarpTop {
+        width: 100% !important;
+    }
+    .WarpTop_text{
+        left: 3rem;
+        right: 3rem;
+    }
+}

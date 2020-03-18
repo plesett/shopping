@@ -1,0 +1,55 @@
+.record{
+  background: #fff;
+  border-bottom: .333vmin solid #f2f2f2;
+  align-items: center;
+  &>div{
+    text-align: center;
+    &>span{
+      display: inline-block;
+      height: 11.733vmin;
+      line-height: 11.733vmin;
+    }
+    .action{
+      color: #f60;
+      border-bottom: .533vmin solid #f60;
+      box-sizing: border-box;
+    }
+  }
+}
+
+.item_img{
+  width: 100%;
+  max-height: 26vmin;
+}
+
+.item_record_info{
+  position: relative;
+  padding: 3vmin 0;
+  &>p{
+    color: rgb(80, 78, 78);
+    padding: .787vmin 0;
+    &>span{
+      color: #f70;
+    }
+  }
+  &>img{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 18vmin;
+  }
+  &>div{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 80%;
+    margin: 2vmin 0;
+    border-radius: 5px;
+    background-color: #f60;
+  }
+}
+
+.jiexiao{
+  padding: 2vmin;
+}

@@ -1,0 +1,40 @@
+.wrapper {
+  width: 25%;
+  text-align: center;
+}
+
+.payType{
+  width: 100%;
+  &>label{
+    padding: 5vmin 0;
+    border-bottom: 1px solid #eee;
+    &>span>img{
+      width: 27px;
+      margin-right: 3vmin;
+    }
+  }
+}
+
+.PayBox{
+  padding: 3vmin;
+  margin: 5vmin 0;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  .ItemPayType{
+    padding: 2vmin 0;
+    border-bottom: 1px solid #eee;
+    .PayWeixin{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 40vmin; 
+      font-size: 18px;
+    }
+  }
+}
+
+.SubFormBtton{
+  width: 100%;
+  height: 10vmin;
+  margin: 3vmin 0;
+}

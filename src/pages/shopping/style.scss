@@ -1,0 +1,190 @@
+.closeBar{
+  background-color: #fff;
+  position: fixed;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  right: 0;
+  bottom: 13.333vmin;
+  width: 100%;
+  max-width: 100vmin;
+  z-index: 999;
+  padding: 0 5vmin;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  content: "viewport-units-buggyfill; bottom: 13.333vmin; max-width: 100vmin";
+  &>div{
+    align-items: center;
+  }
+  .closeBarTotal{
+    height: 13.667vmin;
+    line-height: 13.667vmin;
+    font-size: 4.533vmin;
+  }
+  .closeBarmoney{
+    &>button{
+      float: right;
+      color: #fff;
+      font-size: 4.533vmin;
+      border-radius: 15px;
+      border: none;
+      background-color: #f70;
+    }
+  }
+}
+
+
+
+
+// item
+.Shoping{
+  padding: 3vmin;
+  border-bottom: 1px solid #eee;
+  .Shoping_img{
+    &>img{
+      width: 17vmin;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  .Shoping_info{
+    .Shoping_info_title{
+      text-align: left;
+      font-size: 17px;
+      font-weight: 500;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .Shoping_info_surplus{
+      font-size: 14px;
+      padding: 3vmin 0;
+      &>span{
+        color: #f70;
+      }
+    }
+    .Shoping_info_count{
+      display: flex;
+      align-items: center;
+      width: 28vmin;
+      float: left;
+      border: .267vmin solid #eee;
+      border-radius: 1.067vmin;
+      &>span{
+        display: inline-block;
+        color: #333;
+        width: 25%;
+        text-align: center;
+        font-size: 6.4vmin;
+        height: 7vmin;
+        line-height: 7vmin;
+      }
+      &>div{
+        display: inline-block;
+        width: 50%;
+        height: 6vmin;
+        &>input{
+          width: 100%;
+          height: 100%;
+          border: 0;
+          resize: none;
+          border-left: .267vmin solid #eee;
+          border-right: .267vmin solid #eee;
+          border-radius: 0;
+          text-align: center;
+          font-size: 3.733vmin;
+          content: "viewport-units-buggyfill; border-left: 0.267vmin solid #eee; border-right: 0.267vmin solid #eee; font-size: 3.733vmin"
+        }
+      }
+    }
+  }
+  .manTime{
+    float: left;
+    height: 7.467vmin;
+    line-height: 7.467vmin;
+    margin: 0 3vmin;
+    min-width: 8vmin;
+    text-align: center;
+    font-size: 4vmin;
+    color: #999;
+  }
+  .all{
+    display: inline-block;
+    line-height: 5vmin;
+    min-width: 16vmin;
+    text-align: center;
+    font-size: 4vmin;
+    border: .267vmin solid #eee;
+    padding: 1.067vmin 2.4vmin;
+    border-radius: 1.333vmin;
+  }
+  .Shoping_info_number{
+    margin-top: 1.333vmin;
+    content: "viewport-units-buggyfill; margin-top: 1.333vmin";
+    &>div{
+      min-width: 12vmin;
+      background-color: #eee;
+      border: 1px solid #eee;
+      border-radius: 1.333vmin;
+      text-align: center;
+      font-size: 3.733vmin;
+      font-weight: 500;
+      padding: 1.333vmin 2.667vmin;
+      margin-right: 1.333vmin;
+      content: "viewport-units-buggyfill; border-radius: 1.333vmin; font-size: 3.733vmin; padding: 1.333vmin 2.667vmin; margin-right: 1.333vmin";
+    }
+  }
+}
+
+.prompt{
+  padding-top: 16vmin;
+  text-align: center;
+  background: #fff;
+  padding-bottom: 21.333vmin;
+  content: "viewport-units-buggyfill; padding-top: 16vmin; padding-bottom: 21.333vmin";
+  .blankDiv{
+    margin-bottom: 4vmin;
+    width: 100%;
+    height: 24vmin;
+    content: "viewport-units-buggyfill; margin-bottom: 4vmin";
+  }
+}
+
+.promptButton{
+  margin-top: 10vmin;
+  &>a{
+    display: inline-block;
+    width: 26%;
+    background: #f70;
+    color: #fff;
+    height: 9vmin;
+    line-height: 9vmin;
+    border-radius: 4vmin;
+    font-size: 4.533vmin;
+    content: "viewport-units-buggyfill; height: 8vmin; line-height: 8vmin; border-radius: 4vmin; font-size: 4.533vmin";
+  }
+}
+
+.payInfo{
+  align-items: center;
+  padding: 2vmin;
+  font-size: 4.57vmin;
+  line-height: 35px;
+  &>div{
+    margin: 1vmin 0;
+    border-bottom: 1px solid #eee;
+  }
+}
+
+.payBottin{
+  float: right;
+  color: #fff;
+  font-size: 4vmin;
+  padding: 0 2.5vmin;
+  border-radius: 8px;
+  line-height: 2;
+  background-color: #f70;
+  &:hover{
+    color: #fff;
+  }
+}

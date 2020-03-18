@@ -1,0 +1,278 @@
+// Banner
+.Banner{
+    width: 100%;
+    img{
+        width: 100%;
+        // height: 10.5rem;
+    }
+}
+
+// HomeMenu
+.HomeMenu{
+    position: relative;
+
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #fff;
+    a{
+        padding: 0.2rem;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        z-index: 2;
+        .HomeMenu_img{
+            display: inline-block;
+            height: 2.7rem;
+            padding: 0 4px;
+        }
+        .HomeMenu_text{
+            width: 100%;
+            text-align: center;
+            padding: .3rem 0;
+        }
+    }
+}
+
+// BanenrText
+.BanenrText{
+    position: relative;
+    z-index: 3;
+    overflow: hidden;
+    background-color: rgb(245,245,245);
+    .BanenrText_roll{
+        width: 100%;
+        background-color: #fff;
+        margin: 9px 0;
+        color: rgb(255,119,0);
+    }
+    .BanenrText_inter{
+        position: relative;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        height: 40px;
+        line-height: 40px;
+        margin: .7rem 0;
+        background-color: #fff;
+        .BanenrText_icon{
+            display: inline-block;
+            width: .8vmin;
+            height: 1rem;
+            background: #f70;
+            position: absolute;
+            left: 0;
+            top: 2.933vmin;
+            content: "viewport-units-buggyfill; width: 0.8vmin; height: 4.8vmin; top: 2.933vmin";
+        }
+        img{
+            height: 1rem;
+            margin: auto 14px;
+        }
+        .BanenrText_text{
+            font-size: 15px;
+            color: #f70;
+        }
+        .BanenrText_Buttom{
+            a{
+                border-radius: 1.333vmin;
+                padding: 0 1.333vmin;
+                color: #f70;
+                background-color: #fff;
+                border: 1px solid #f70;
+                content: "viewport-units-buggyfill; right: 4vmin; border-radius: 1.333vmin; padding: 0 1.333vmin";
+            }
+        }
+    }
+}
+
+// Commodity
+.Commodity{
+    margin-top: 0;
+    font-size: 4.533vmin;
+    overflow: hidden;
+    position: relative;
+    background-color: #fff;
+    border-bottom: .267vmin solid #eee;
+    content: "viewport-units-buggyfill; font-size: 4.533vmin; border-bottom: 0.267vmin solid #eee";
+    .Commodity_icon{
+        display: inline-block;
+        width: .8vmin;
+        height: 4.8vmin;
+        background: #f70;
+        position: absolute;
+        left: 0;
+        top: 2.933vmin;
+        content: "viewport-units-buggyfill; width: 0.8vmin; height: 4.8vmin; top: 2.933vmin";
+    }
+    .Commodity_box{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        color: inherit;
+        width: 100%;
+        align-items: center;
+        display: flex;
+        padding: 2.667vmin 4vmin;
+        content: "viewport-units-buggyfill; padding: 2.667vmin 4vmin";
+        .Commodity_lottery{
+            img{
+                height: 1rem;
+                margin-right: 5px;
+                display: block;
+            }
+        }
+        .Commodity_text{
+            font-size: 15px;
+            color: #f70;
+        }
+    }
+}
+
+// CommodityMap
+    .CommodityMap_item{
+        width: 100%;
+        padding: 0.5rem;
+        cursor: pointer;
+        border-right: 1px solid #eee;
+        border-top: 1px solid #eee;
+        .CommodityMap_item_img{
+            display: block;
+            padding: 0 20px;
+            height: 143px;
+            img{
+                display: block;
+                height: 100%;
+                margin: 0 auto;
+            }
+        }
+        .CommodityMap_item_info{
+            width: 100%;
+            height: 37px;
+            overflow: hidden;
+            -webkit-line-clamp: 2; 
+            text-overflow: ellipsis;
+            // white-space: nowrap;
+            text-align: left;
+            font-size: 13px;
+            color: #000;
+            line-height: 1.4;
+        }
+        .CommodityMap_item_price{
+            font-size: 13px;
+            text-align: left;
+            color: #999;
+            line-height: 1.4;
+            margin: 0.3rem 0;
+        }
+        .van_progress{
+            margin: .8vmin 2.133vmin;
+            margin-left: 0;
+            content: "viewport-units-buggyfill; margin: 0.8vmin 2.133vmin";
+            .van_link{
+                height: 4px;
+                position: relative;
+                border-radius: 4px;
+                background: #e5e5e5;
+                span{
+                    left: 0;
+                    height: 100%;
+                    position: absolute;
+                    border-radius: inherit;
+                    width: 26.9932px;
+                    background: rgb(255, 119, 1);
+                }
+            }
+        }
+        .ShowButtom{
+            padding: 1.333vmin 0;
+            content: "viewport-units-buggyfill; padding: 1.333vmin 2.667vmin 0";
+            .ShowButtom_box{
+                display: flex;
+                justify-content: center;
+                position: relative;
+                &>a{
+                    font-size: 0;
+                    margin: 0 1rem;
+                }
+                .ShowButtom_action{
+                    position: relative;
+                    width: 6.23rem;
+                    height: 1.8rem;
+                    color: #f70;
+                    border: .267vmin solid #f70;
+                    border-radius: 4.667vmin;
+                    box-sizing: border-box;
+                    overflow: hidden;
+                    text-align: center;
+                    line-height: 1.6rem;
+                    transition:all .4s ease-out;
+                    content: "viewport-units-buggyfill; width: 26.667vmin; height: 8vmin; border: 0.267vmin solid #ff7700; border-radius: 4.667vmin";
+                }
+                .ShowButtom_action_icon{
+                    width: 2rem;
+                    height: 2rem;
+                    font-size: 1.8rem;
+                    text-align: center;
+                    line-height: 23px;
+                    background-color: rgb(255,119,0);
+                    border-radius: 50%;
+                    i{
+                        color: #fff;
+                        font-size: 1.2rem;
+                    }
+                }
+                #actionAdd{
+                    animation-name: scaleDraw; /*关键帧名称*/
+                    animation-timing-function: ease-in-out; /*动画的速度曲线*/
+                    animation-iteration-count: 1;  /*动画播放的次数*/
+                    animation-duration: .4s; /*动画所花费的时间*/
+                }
+
+                @keyframes scaleDraw {  /*定义关键帧、scaleDrew是需要绑定到选择器的关键帧名称*/
+                    0%{
+                        transform: scale(1);  /*开始为原始大小*/
+                    }
+                    25%{
+                        transform: scale(1.1); /*放大1.1倍*/
+                    }
+                    50%{
+                        transform: scale(1.2);
+                    }
+                    75%{
+                        transform: scale(1.1);
+                    }
+                    100%{
+                        transform: scale(1);
+                    }
+                }
+            }
+        }
+    }
+
+    // loading
+    .spinLoading{
+        &>div{
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background-color: #000;
+            z-index: 200;
+            opacity: .6;
+            &>span{
+                margin-top: 21rem;
+            }
+        }
+    }
+
+    // addProduct
+    .addProduct{
+        color: #999;
+        text-align: center;
+        height: 44px;
+        line-height: 44px;
+        border-top: 1px solid #eee;
+    }
