@@ -1,18 +1,19 @@
+import { connect } from 'dva';
 import React from 'react';
-import styles from './style.scss';
-import BarData from './mock';
 import Link from 'umi/link';
 import withRouter from 'umi/withRouter';
-import { connect } from 'dva'
+import BarData from './mock';
+import styles from './style.scss';
 
 interface ITabBarExampleProps {
-	history: any
+	history: any;
 	shopping: {
 		shopping: Array<any>
 	}
 }
 
 interface Iactio_nBarState {
+	dynamic: boolean;
 }
 
 class TabBarExample extends React.Component<ITabBarExampleProps, Iactio_nBarState> {

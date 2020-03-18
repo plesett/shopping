@@ -13,7 +13,13 @@ interface IAffirmProps {
   }
 }
 
-class Affirm extends React.Component<IAffirmProps> {
+interface IAffirmState {
+  InputPassOne: string;
+  InputPassTow: string;
+  InputPassThree: string;
+}
+
+class Affirm extends React.Component<IAffirmProps, IAffirmState> {
 
   state = {
     InputPassOne: '',
@@ -30,7 +36,7 @@ class Affirm extends React.Component<IAffirmProps> {
       InputPassTow,
       InputPassThree
     } = this.state;
-    if (InputPassTow === InputPassThree && InputPassOne !== '' && InputPassTow !== '' ) {
+    if (InputPassTow === InputPassThree && InputPassOne !== '' && InputPassTow !== '') {
       // 请求验证
       User_Update_Pass(
         uid,

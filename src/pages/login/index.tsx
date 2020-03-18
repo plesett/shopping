@@ -4,10 +4,12 @@ import Link from 'umi/link';
 import { User_login } from '@/service/api';
 import router from 'umi/router';
 
-export interface ILoginProps {
+interface ILoginState {
+  mobileValue: string;
+  passValue: string;
 }
 
-export default class Login extends React.Component<ILoginProps> {
+export default class Login extends React.Component<null, ILoginState> {
 
   state = {
     mobileValue: '',
@@ -31,7 +33,7 @@ export default class Login extends React.Component<ILoginProps> {
             case 0:
               message.success(msg, 2);
               // 清楚可能存在的 token
-              localStorage.removeItem('token');　　
+              localStorage.removeItem('token');
               // 保存token
               localStorage.setItem('token', v.data.token);
               // 跳转首页

@@ -18,7 +18,7 @@ class ClassifySort extends React.Component<IClassifySortProps> {
 	handleSort = (id: number) => {
 		const { dispatch, global } = this.props;
 		const { sotrPrice } = this.state;
-		this.setState({ isSort: id, sotr: !this.state.sotr, sotrPrice: sotrPrice + 1 === 3 ? 1 : sotrPrice + 1}, () => {
+		this.setState({ isSort: id, sotr: !this.state.sotr, sotrPrice: sotrPrice + 1 === 3 ? 1 : sotrPrice + 1 }, () => {
 			switch (this.state.isSort) {
 				case 0:
 					// 揭晓
@@ -74,6 +74,6 @@ class ClassifySort extends React.Component<IClassifySortProps> {
 	}
 }
 
-export default connect(({ global }:any) => ({
+export default connect(({ global }: any) => ({
 	global
 }))(ClassifySort);

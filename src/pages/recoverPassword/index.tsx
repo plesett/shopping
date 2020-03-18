@@ -4,10 +4,14 @@ import Countdown from 'antd/lib/statistic/Countdown';
 import router from 'umi/router';
 import { send_Code, USer_Forget } from '@/service/api';
 
-interface IRecoverPasswordProps {
+interface IRecoverPasswordState {
+  isDownCount: boolean;
+  mobileValue: string;
+  newPassValue: string;
+  codeValue: string;
 }
 
-export default class RecoverPassword extends React.Component<IRecoverPasswordProps> {
+export default class RecoverPassword extends React.Component<null, IRecoverPasswordState> {
 
   state = {
     isDownCount: false,
@@ -15,11 +19,9 @@ export default class RecoverPassword extends React.Component<IRecoverPasswordPro
     newPassValue: '',
     codeValue: ''
   }
-
   onFinish = () => {
     this.setState({ isDownCount: false })
   }
-
 
   sendCode = () => {
     const { mobileValue } = this.state;
@@ -45,7 +47,6 @@ export default class RecoverPassword extends React.Component<IRecoverPasswordPro
     message.error('手机号码不合法', 2)
     this.setState({ isDownCount: false, mobileValue: '' })
   }
-
 
   handleSubFormForget = () => {
     // 获取参数

@@ -1,23 +1,20 @@
 import React from 'react';
 import QueueAnim from 'rc-queue-anim';
 
-export default class PageAnimation extends React.PureComponent {
-
+export default class PageAnimation extends React.PureComponent<{ children: any }, { show: boolean; }> {
 	state = {
 		show: true
 	};
-
 	componentWillUnmount() {
 		this.OutPage()
 	}
-
 	OutPage = () => {
 		this.setState({
 			show: !this.state.show
 		});
 	}
-
 	render() {
+		const { show } = this.state;
 		return (
 			<div className="queue-demo">
 				<QueueAnim
@@ -26,7 +23,7 @@ export default class PageAnimation extends React.PureComponent {
 					type={['top', 'bottom']}
 					ease={['easeOutQuart', 'easeInOutQuart']}
 				>
-					{this.state.show ? [
+					{show ? [
 						<div className="demo-tbody" key="b">
 							{this.props.children}
 						</div>

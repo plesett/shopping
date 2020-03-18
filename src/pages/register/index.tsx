@@ -5,10 +5,14 @@ import router from 'umi/router';
 import Countdown from 'antd/lib/statistic/Countdown';
 import { send_Code, User_register } from '@/service/api';
 
-interface IRegisterProps {
+interface IRegisterState {
+  mobileValue: string;
+  passValue: string;
+  codeValue: string;
+  isDownCount: boolean;
 }
 
-export default class Register extends React.Component<IRegisterProps> {
+export default class Register extends React.Component<null, IRegisterState> {
 
   state = {
     mobileValue: '',
@@ -16,11 +20,9 @@ export default class Register extends React.Component<IRegisterProps> {
     codeValue: '',
     isDownCount: false
   }
-
   onFinish = () => {
     this.setState({ isDownCount: false })
   }
-
   sendCode = () => {
     const { mobileValue } = this.state;
     var myreg = /^[1][3,4,5,7,8][0-9]{9}$/;

@@ -22,7 +22,13 @@ interface IShoppingProps {
   }
 }
 
-class Shopping extends React.Component<IShoppingProps> {
+interface IShoppingState {
+  visible: boolean;
+  confirmLoading: boolean;
+  checked: boolean;
+}
+
+class Shopping extends React.Component<IShoppingProps, IShoppingState> {
 
   state = {
     visible: false,

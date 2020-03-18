@@ -24,7 +24,6 @@ class Record extends React.Component<IRecordProps> {
     pageData: [],
     all: []
   }
-
   componentDidMount() {
     const { user } = this.props;
     const { uid } = user.user_info;

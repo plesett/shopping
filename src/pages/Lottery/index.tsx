@@ -50,11 +50,7 @@ class LotteryMap extends React.Component<ILotteryMapProps, ILotteryMapState> {
       this.setState({ isCountDown: true })
     }
   }
-
-  componentDidUpdate() {
-
-  }
-
+  
   addProduct = () => {
     const { pageCount } = this.state;
     const { dispatch } = this.props;

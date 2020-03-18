@@ -1,6 +1,6 @@
 #### 模仿云购电商项目
 
-> umi + dva   前台umi全家桶
+> umi + dva + typescript  前台umi全家桶
 
 > ant design pro   基于蚂蚁金服后台管理开发
 
