@@ -91,7 +91,7 @@ class Record extends React.Component<IRecordProps> {
                                   <div className={style.item_record_info}>
                                     <p>{v.product}</p>
                                     {
-                                      v.state === 3 ? <>
+                                      v.state === 1 ? <>
                                         <p>获奖者: <span>{v.nickname}({v.mobile})</span></p>
                                         <p>开奖时间: <span>{dayjs(v.create_time).format("YYYY-MM-DD HH:mm")}</span></p>
                                         <img src={require('@/assets/winner0.png')} alt="" />

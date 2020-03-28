@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Col, Avatar, Button, message, Dropdown, Menu, Input, Modal } from 'antd';
+import { Row, Col, Avatar, Button, message, Dropdown, Menu, Input } from 'antd';
 import style from './style.scss';
 import PageAnimation from '@/comm/PageAnimation';
 import { Login_out, User_Info_Update } from '@/service/api';
@@ -101,8 +101,8 @@ class UserSet extends React.Component<IUserSetProps> {
     const { nickname, sex } = this.state;
     // 发送请求
     User_Info_Update(
-      nickname ? nickname : user.user_info.nickname, 
-      Sexdict[sex], 
+      nickname ? nickname : user.user_info.nickname,
+      Sexdict[sex],
       uid
     ).then((v) => {
       if (v.data.code === 0) {
@@ -176,7 +176,7 @@ class UserSet extends React.Component<IUserSetProps> {
                     visible={this.state.visible}
                   >
                     <span className="ant-dropdown-link">
-                      {this.state.sex ? this.state.sex : sex === 0 ? '女' : sex === 1 ? '男' : '保密'}
+                      {this.state.sex ? this.state.sex : sex === 0 ? '女' : sex === 1 ? '男' : '保密中'}
                     </span>
                   </Dropdown>
                   <img
@@ -211,21 +211,21 @@ class UserSet extends React.Component<IUserSetProps> {
             borderTop: '1vmin solid rgb(245,245,245)'
           }}>
             <Link to="/affirm/">
-            <Col span={24} className={style.set_box}>
-              <Row type='flex' justify='space-between'>
-                <div>安全设置</div>
-                <div>
-                  <img
-                    src={require('@/assets/htb－Arrow right02.svg')}
-                    alt=""
-                    style={{
-                      width: 10,
-                      marginLeft: '2vmin'
-                    }}
-                  />
-                </div>
-              </Row>
-            </Col>
+              <Col span={24} className={style.set_box}>
+                <Row type='flex' justify='space-between'>
+                  <div>安全设置</div>
+                  <div>
+                    <img
+                      src={require('@/assets/htb－Arrow right02.svg')}
+                      alt=""
+                      style={{
+                        width: 10,
+                        marginLeft: '2vmin'
+                      }}
+                    />
+                  </div>
+                </Row>
+              </Col>
             </Link>
           </Row>
           <Row style={{

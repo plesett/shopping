@@ -1,8 +1,8 @@
 import React, { CSSProperties } from 'react';
 import style from './style.scss';
-import { Col, Row, Card, Radio, Input, Button, Drawer } from 'antd';
+import { Col, Row, Card, Radio, Button, Drawer } from 'antd';
 import { money } from './mock';
-import RadioGroup from 'antd/lib/radio/group';
+import { CodePreview } from '@/utils/CodePreview';
 
 interface IPayProps {
 }
@@ -157,11 +157,11 @@ class Pay extends React.Component<IPayProps> {
               onClose={this.onClose}
               visible={this.state.visible}
             >
-              <p>微信: XASDASD</p>
+              <p>微信: <CodePreview>ASDASD</CodePreview></p>
               <img src={require('@/assets/qq.jpg')} alt="" style={{ width: '100%' }} />
-              <p>QQ: 15574648646</p>
+              <p>QQ: <CodePreview>2413052113</CodePreview></p>
               <img src={require('@/assets/qq.jpg')} alt="" style={{ width: '100%' }} />
-              <p>物流客服: 45545 </p>
+              <p>物流客服: <CodePreview>2413052113</CodePreview> </p>
               <img src={require('@/assets/qq.jpg')} alt="" style={{ width: '100%' }} />
             </Drawer>
           </div>
