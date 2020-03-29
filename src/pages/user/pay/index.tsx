@@ -6,6 +6,7 @@ import { CodePreview } from '@/utils/CodePreview';
 import { Get_Pay_Url, Record_Product } from '@/service/api';
 import { connect } from 'dva';
 import router from 'umi/router';
+import ServiceInfo from '@/comm/service';
 
 interface IPayProps {
   dispatch: any
@@ -53,22 +54,14 @@ class Pay extends React.Component<IPayProps> {
     }
   }
 
-  showDrawer = () => {
+  CloseAlert = () => {
     this.setState({
-      visible: true,
-    });
-  };
-
-  onClose = () => {
-    this.setState({
-      visible: false,
-    });
-  };
-
-  onChange = (e: any) => {
-    this.setState({
-      placement: e.target.value,
-    });
+      visible: !this.state.visible
+    }, () => {
+      this.setState({
+        visible: !this.state.visible
+      })
+    })
   }
 
   handleMoneyNumber = (value: number) => {
@@ -124,7 +117,7 @@ class Pay extends React.Component<IPayProps> {
   }
 
   render() {
-    const { SelectMoney, checked } = this.state;
+    const { SelectMoney, checked, visible } = this.state;
     const PayStyle: CSSProperties = {
       width: '30vmin',
       textAlign: 'left'
@@ -205,8 +198,7 @@ class Pay extends React.Component<IPayProps> {
               </Row>
             </Col>
           </Row>
-
-          <div style={{
+          <Row style={{
             padding: '4vmin 0'
           }}>
             <Button
@@ -216,25 +208,11 @@ class Pay extends React.Component<IPayProps> {
             >
               充值
             </Button>
-            <Button type="primary" onClick={this.showDrawer} className={style.SubFormBtton}>
+            <Button type="primary" onClick={this.CloseAlert} className={style.SubFormBtton}>
               联系客服
             </Button>
-            <Drawer
-              title="客服联系方式"
-              placement='left'
-              closable={false}
-              onClose={this.onClose}
-              visible={this.state.visible}
-            >
-              <p>微信: <CodePreview>ASDASD</CodePreview></p>
-              <img src={require('@/assets/qq.jpg')} alt="" style={{ width: '100%' }} />
-              <p>QQ: <CodePreview>2413052113</CodePreview></p>
-              <img src={require('@/assets/qq.jpg')} alt="" style={{ width: '100%' }} />
-              <p>物流客服: <CodePreview>2413052113</CodePreview> </p>
-              <img src={require('@/assets/qq.jpg')} alt="" style={{ width: '100%' }} />
-            </Drawer>
-          </div>
-
+            <ServiceInfo visible={visible} />
+          </Row>
         </div>
       </div>
     );

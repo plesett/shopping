@@ -10,27 +10,41 @@
 // HomeMenu
 .HomeMenu{
     position: relative;
-
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
     width: 100%;
     background-color: #fff;
+    padding: 0 3vmin;
     a{
         padding: 0.2rem;
-        display: flex;
+        // display: flex;
         justify-content: center;
         flex-wrap: wrap;
         z-index: 2;
+        &>i{
+            text-align: center;
+            margin: 0 auto;
+            width: 100%;
+            font-size: 35px;
+        }
         .HomeMenu_img{
             display: inline-block;
             height: 2.7rem;
             padding: 0 4px;
         }
         .HomeMenu_text{
+            font-size: 3vmin;
             width: 100%;
             text-align: center;
-            padding: .3rem 0;
+            padding: .5rem 0;
+        }
+        .HomeMenu_Copy{
+            position: absolute;
+            color: #fff;
+            width: 14vmin;
+            height: 14vmin;
+            z-index: -100;
         }
     }
 }
