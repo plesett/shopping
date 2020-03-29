@@ -157,3 +157,12 @@ a{
 .ant-modal-body{
     padding: 0 !important;
 }
+
+.ant-carousel .slick-slide {
+  text-align: center;
+  overflow: hidden;
+}
+
+.ant-carousel .slick-slide h3 {
+  color: #fff;
+}

@@ -1,14 +1,27 @@
 import React, { useState } from 'react';
 import styles from './comonentsStyle.scss';
 import Link from 'umi/link';
-
+import { Carousel } from 'antd';
 import TextScroll from 'react-textscroll';
 
 // 主页 轮播图
 export const Banner = () => {
     return (
         <div className={styles.Banner}>
-            <img src="http://cdn.wdhkdjj.com/images/focus/20191219/5dfb3c14a7e6e.jpeg?x-oss-process=image/resize,w_600" alt="" />
+            <Carousel autoplay>
+                <div>
+                    <img src="http://cdn.wdhkdjj.com/images/focus/20191219/5dfb3c14a7e6e.jpeg?x-oss-process=image/resize,w_600" alt="" />
+                </div>
+                <div>
+                    <img src="http://cdn.wdhkdjj.com/images/focus/20191219/5dfb3c14a7e6e.jpeg?x-oss-process=image/resize,w_600" alt="" />
+                </div>
+                <div>
+                    <img src="http://cdn.wdhkdjj.com/images/focus/20191219/5dfb3c14a7e6e.jpeg?x-oss-process=image/resize,w_600" alt="" />
+                </div>
+                <div>
+                    <img src="http://cdn.wdhkdjj.com/images/focus/20191219/5dfb3c14a7e6e.jpeg?x-oss-process=image/resize,w_600" alt="" />
+                </div>
+            </Carousel>
         </div>
     )
 }
