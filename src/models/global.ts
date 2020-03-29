@@ -2,6 +2,7 @@ export default {
     namespace: 'global',
 
     state: {
+        ishint: true,
         isCountDown: false,
         winner_end_time: '',
         // classify
@@ -27,6 +28,11 @@ export default {
                 code: code.code
             });
         },
+        *isHint(_: any, { call, put }: any) {
+            yield put({
+                type: 'isHintState',
+            });
+        },
     },
 
     reducers: {
@@ -46,6 +52,12 @@ export default {
             return {
                 ...state,
                 isClassify: action.code
+            };
+        },
+        isHintState(state: { isUnfold: boolean; }, action: { code: number }) {
+            return {
+                ...state,
+                ishint: false
             };
         },
     },

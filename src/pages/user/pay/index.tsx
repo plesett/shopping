@@ -2,7 +2,6 @@ import React, { CSSProperties } from 'react';
 import style from './style.scss';
 import { Col, Row, Card, Radio, Button, Drawer, message } from 'antd';
 import { money } from './mock';
-import { CodePreview } from '@/utils/CodePreview';
 import { Get_Pay_Url, Record_Product } from '@/service/api';
 import { connect } from 'dva';
 import router from 'umi/router';

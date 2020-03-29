@@ -10,6 +10,14 @@ export interface IUserModuleProps {
 }
 
 export default class UserModule extends React.Component<IUserModuleProps> {
+
+  componentDidMount(){
+    // 检测路由是否为充值后路由
+    // 请求查询是否存在充值记录 out_trade_no
+    // 存在通知充值成功
+    // 不存在通知失败
+  }
+
   render() {
     const token = localStorage.getItem("token");
     return (
