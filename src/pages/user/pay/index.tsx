@@ -1,10 +1,19 @@
 import React, { CSSProperties } from 'react';
 import style from './style.scss';
-import { Col, Row, Card, Radio, Button, Drawer } from 'antd';
+import { Col, Row, Card, Radio, Button, Drawer, message } from 'antd';
 import { money } from './mock';
 import { CodePreview } from '@/utils/CodePreview';
+import { Get_Pay_Url, Record_Product } from '@/service/api';
+import { connect } from 'dva';
+import router from 'umi/router';
 
 interface IPayProps {
+  dispatch: any
+  user: {
+    user_info: {
+      uid: number;
+    }
+  }
 }
 
 class Pay extends React.Component<IPayProps> {
@@ -18,6 +27,30 @@ class Pay extends React.Component<IPayProps> {
     ],
     visible: false,
     placement: 'left'
+  }
+
+  componentDidMount() {
+    // 判断必须存在用户信息
+    const { user } = this.props;
+    const { uid } = user.user_info;
+    if (uid !== undefined) {
+      Record_Product(uid)
+        .then((v) => {
+          console.log(v);
+          switch (v.data.code) {
+            case 200:
+              this.setState({
+                all: v.data.sn
+              })
+              break;
+            default:
+              router.push('/user/')
+              break;
+          }
+        })
+    } else {
+      router.push('/user/')
+    }
   }
 
   showDrawer = () => {
@@ -58,6 +91,38 @@ class Pay extends React.Component<IPayProps> {
     console.log(id);
   }
 
+  handleSubPay = () => {
+    const { user } = this.props;
+    const { uid } = user.user_info;
+    const { checked, SelectMoney } = this.state;
+    let type = null;
+    // 遍历获取支付方式
+    for (let i = 0; i < checked.length; i++) {
+      const element = checked[i];
+      if (element.state) {
+        type = element.id
+        break;
+      }
+    }
+    console.log(type, SelectMoney, uid)
+    if (type === null) {
+      message.info('请选择支付方式');
+    } else {
+      if (SelectMoney === 0) {
+        message.info('请选择充值金额');
+      } else {
+        Get_Pay_Url(uid, SelectMoney, type)
+          .then(res => {
+            window.location.href = res.data
+          })
+          .catch(err => {
+            message.error('错误')
+            router.push('/user/')
+          })
+      }
+    }
+  }
+
   render() {
     const { SelectMoney, checked } = this.state;
     const PayStyle: CSSProperties = {
@@ -85,7 +150,7 @@ class Pay extends React.Component<IPayProps> {
               borderBottom: '1px solid #eee'
             }}>支付方式:</Col>
 
-            <Col className={style.ItemPayType}
+            {/* <Col className={style.ItemPayType}
               onClick={() => this.handleSelect(0)}
             >
               <Row type='flex' justify='space-between'>
@@ -101,7 +166,7 @@ class Pay extends React.Component<IPayProps> {
                   checked={checked[0].state}
                 />
               </Row>
-            </Col>
+            </Col> */}
 
 
             <Col className={style.ItemPayType}
@@ -121,8 +186,8 @@ class Pay extends React.Component<IPayProps> {
                 />
               </Row>
             </Col>
-
-            <Col className={style.ItemPayType}
+            <Col
+              className={style.ItemPayType}
               onClick={() => this.handleSelect(2)}
             >
               <Row type='flex' justify='space-between'>
@@ -144,7 +209,11 @@ class Pay extends React.Component<IPayProps> {
           <div style={{
             padding: '4vmin 0'
           }}>
-            <Button type="primary" className={style.SubFormBtton}>
+            <Button
+              type="primary"
+              className={style.SubFormBtton}
+              onClick={this.handleSubPay}
+            >
               充值
             </Button>
             <Button type="primary" onClick={this.showDrawer} className={style.SubFormBtton}>
@@ -172,4 +241,6 @@ class Pay extends React.Component<IPayProps> {
   }
 }
 
-export default Pay;
+export default connect(({ user }: any) => ({
+  user
+}))(Pay);

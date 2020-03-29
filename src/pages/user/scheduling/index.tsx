@@ -1,12 +1,16 @@
-
 import React from 'react';
+import Axios from 'axios';
 
-import styles from './index.css';
+interface ISchedulingProps {
+}
 
-export default function() {
-  return (
-    <div className={styles.normal}>
-      <h1>Page index</h1>
-    </div>
-  );
+export default class Scheduling extends React.Component<ISchedulingProps> {
+
+  public render() {
+    return (
+      <div>
+        11
+      </div>
+    );
+  }
 }

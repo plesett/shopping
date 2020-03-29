@@ -78,6 +78,10 @@ export async function send_Code(mobile: number, type?: 'forget') {
     return request(`/sms?mobile=${mobile}${type ? '&type=forget' : ''}`)
 }
 
+// 获取支付连接
+export async function Get_Pay_Url(uid: number, money: number, type: number) {
+    return request(`/user/pay?uid=${uid}&money=${money}&type=${type}&`, 'POST')
+}
 
 // 获取用户个人信息
 export async function User_Info(token: string) {
