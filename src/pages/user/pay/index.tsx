@@ -36,7 +36,6 @@ class Pay extends React.Component<IPayProps> {
     if (uid !== undefined) {
       Record_Product(uid)
         .then((v) => {
-          console.log(v);
           switch (v.data.code) {
             case 200:
               this.setState({
@@ -80,7 +79,6 @@ class Pay extends React.Component<IPayProps> {
     this.setState({
       checked: arr
     })
-    console.log(id);
   }
 
   handleSubPay = () => {
@@ -96,7 +94,6 @@ class Pay extends React.Component<IPayProps> {
         break;
       }
     }
-    console.log(type, SelectMoney, uid)
     if (type === null) {
       message.info('请选择支付方式');
     } else {

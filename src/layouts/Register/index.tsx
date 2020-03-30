@@ -10,7 +10,6 @@ interface IRegisterLayoutProps {
 
 class RegisterLayout extends React.Component<IRegisterLayoutProps> {
   onClickBack = () => {
-    console.log(this.props);
     this.props.history.go(-1)
   }
   render() {

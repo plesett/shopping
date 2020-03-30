@@ -94,7 +94,6 @@ class Particulars extends React.Component<IParticularsProps, IParticularsState> 
     const count = this.props.shopping.shopping.length;
     if (!particulars.isLoading) {
       const { title, upfile, price, zongcanyu, yicanyu } = particulars.particulars_info.info;
-      console.log(particulars.particulars_info.info);
       const { winners } = particulars.particulars_info;
       return (
         <div id='top'>

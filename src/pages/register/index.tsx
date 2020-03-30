@@ -27,7 +27,6 @@ export default class Register extends React.Component<null, IRegisterState> {
     const { mobileValue } = this.state;
     var myreg = /^[1][3,4,5,7,8][0-9]{9}$/;
     if (myreg.test(mobileValue)) {
-      console.log(mobileValue);
       // 发送短信验证码
       send_Code(Number(mobileValue))
         .then((v) => {

@@ -30,7 +30,6 @@ class Record extends React.Component<IRecordProps> {
     if (uid !== undefined) {
       Record_Product(uid)
         .then((v) => {
-          console.log(v);
           switch (v.data.code) {
             case 200:
               this.setState({

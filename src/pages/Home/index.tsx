@@ -28,7 +28,6 @@ class Home extends React.Component<IHomeProps> {
   }
 
   openNotification = (systemclText: string) => {
-    console.log(systemclText)
     const args = {
       message: '系统通知',
       description:
