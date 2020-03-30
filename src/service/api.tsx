@@ -1,4 +1,9 @@
-import request from "@/utils/request"
+import request from "@/utils/request";
+
+// 主页通知信息
+export async function Get_Notice_info() {
+    return await request('/notice')
+}
 
 // 主页列表数据
 export async function Get_Home_Data(page: number, per_page?: number) {
@@ -49,9 +54,6 @@ export async function Get_classify_price(classify_code: number, type: 'desc' | '
         return request(`/classify_price?type=${type}`)
     }
 }
-
-// 购物车
-
 
 // 注册
 export async function User_register(mobile: number, pass: string, code: number) {

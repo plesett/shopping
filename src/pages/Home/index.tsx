@@ -4,31 +4,35 @@ import Commodity from './productInfo';
 import { IHomeProps } from './type';
 import { Button, notification } from 'antd';
 import { connect } from 'dva';
+import { Get_Notice_info } from '@/service/api';
 
 class Home extends React.Component<IHomeProps> {
 
-  state={
+  state = {
     hint: true
   }
 
-  componentDidMount(){
+  componentDidMount() {
     // 请求判断是否有全局通知
-    const { global, dispatch } = this.props;
-    if (global.ishint) {
+    const { global, user, dispatch } = this.props;
+    const { uid, inform } = user.user_info;
+    let systemclText = global.notice.length > 0 && global.notice[5].notice;
+    if (inform === 0 && global.ishint && uid) {
       // 打开通知
-      this.openNotification()
+      this.openNotification(systemclText)
       // 关闭通知状态
       dispatch({
-        type: "global/isHint"
+        type: "global/isHint",
       })
     }
   }
 
-  openNotification = () => {
+  openNotification = (systemclText: string) => {
+    console.log(systemclText)
     const args = {
       message: '系统通知',
       description:
-        '新平台上线注册即送 5000 大礼包，赶快注册吧！',
+        systemclText,
       duration: 0,
       style: {
         marginTop: 100,
@@ -37,17 +41,26 @@ class Home extends React.Component<IHomeProps> {
     notification.open(args);
   };
   render() {
-    return (
-      <>
-        <Banner />
-        <HomeMenu />
-        <BanenrText />
-        <Commodity />
-      </>
-    )
+    const { global } = this.props;
+    if (Boolean(global.notice)) {
+      return (
+        <>
+          <Banner />
+          <HomeMenu />
+          <BanenrText
+            text={global.notice.length > 0 && global.notice[0].notice}
+          />
+          <Commodity
+            text={global.notice.length > 0 && global.notice[1].notice}
+          />
+        </>
+      )
+    } else {
+      return null;
+    }
   }
 }
 
-export default connect(({ global }:any) => ({
-  global
+export default connect(({ global, user }: any) => ({
+  global, user
 }))(Home);

@@ -77,8 +77,10 @@ export const HomeMenu = () => {
 }
 
 // 主页 轮播信息
-export const BanenrText = () => {
-    const text = ['券小劵自助兑换升级版，公平、公正、天天惊喜、惊喜无限！客服小妹QQ：84101677！']
+export const BanenrText = (props: { text: string }) => {
+    // const text = ['券小劵自助兑换升级版，公平、公正、天天惊喜、惊喜无限！客服小妹QQ：84101677！']
+    const text: string[] = []
+    text.push(props.text)
     return (
         <div className={styles.BanenrText}>
             <div className={styles.BanenrText_roll}>
