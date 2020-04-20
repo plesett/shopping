@@ -22,31 +22,14 @@
 
 > 邮箱: tongtao525@163.com
 
-**微信:**
-<img src="./images/Screenshot_2020-03-18-12-58-21-074_com.tencent.mm.jpg" alt="" />
+> 微信: tongtao98
+
 
 **效果预览前台**
 
-<img src="./images/Screenshot_2020-03-18-12-24-35-098_com.tencent.mo.jpg" alt="" /> 
-<img src="./images/Screenshot_2020-03-18-12-24-45-177_com.tencent.mo.jpg" alt="" /> 
-<img src="./images/Screenshot_2020-03-18-12-24-51-480_com.tencent.mo.jpg" alt="" /> 
-<img src="./images/Screenshot_2020-03-18-12-24-57-976_com.tencent.mo.jpg" alt="" /> 
-<img src="./images/Screenshot_2020-03-18-12-25-01-624_com.tencent.mo.jpg" alt="" /> 
-<img src="./images/Screenshot_2020-03-18-12-25-28-666_com.tencent.mo.jpg" alt="" /> 
-<img src="./images/Screenshot_2020-03-18-12-25-33-555_com.tencent.mo.jpg" alt="" /> 
-<img src="./images/Screenshot_2020-03-18-12-25-42-836_com.tencent.mo.jpg" alt="" /> 
-<img src="./images/Screenshot_2020-03-18-12-25-51-728_com.tencent.mo.jpg" alt="" /> 
-<img src="./images/Screenshot_2020-03-18-12-26-33-626_com.tencent.mo.jpg" alt="" /> 
-<img src="./images/Screenshot_2020-03-18-12-26-40-054_com.tencent.mo.jpg" alt="" /> 
+[http://47.101.206.144/](http://47.101.206.144/)
 
 **效果预览后台台**
 
-<img src="./images/QQ截图20200318124913.png" alt="" />
-<img src="./images/QQ截图20200318124958.png" alt="" />
-<img src="./images/QQ截图20200318125204.png" alt="" />
-<img src="./images/QQ截图20200318125219.png" alt="" />
-<img src="./images/QQ截图20200318125230.png" alt="" />
-<img src="./images/QQ截图20200318125524.png" alt="" />
-<img src="./images/QQ截图20200318125539.png" alt="" />
-<img src="./images/QQ截图20200318125551.png" alt="" />
-<img src="./images/QQ截图20200318125457.png" alt="" />
+[http://47.101.206.144:8009/welcome](http://47.101.206.144/)
+
